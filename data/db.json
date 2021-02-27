@@ -3,12 +3,14 @@
         {
             "title": "Create new homepage banner",
             "id": 1,
-            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+            "completed": true
         },
         {
             "title": "Update promo link",
             "id": 2,
-            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+            "completed": false
         }
     ]
 }
