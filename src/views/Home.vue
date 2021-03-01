@@ -1,10 +1,12 @@
 <template>
   <FilterNav />
-  <div v-for="project in projects">
+  <div v-if="error">{{ error }}</div>
+  <div class="projectlist" v-for="project in projects">
     <span>
-      {{ project.title }} <br />
+      <p>{{ project.title }}</p>
       {{ project.description }}</span
     >
+    <br />
   </div>
 </template>
 
@@ -36,8 +38,25 @@ export default {
 
     load();
 
-    return { posts };
+    return { projects, error };
   },
 };
 </script>
-
+<style>
+p {
+  font-size: 1.7rem;
+}
+span {
+  border: solid black 0.08rem;
+  /* padding-left: 25rem; */
+  border-radius: 10px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: left; */
+  padding-bottom: 5px;
+}
+.projectlist {
+  padding-left: 25rem;
+}
+</style>
