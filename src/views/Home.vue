@@ -1,11 +1,12 @@
 <template>
   <FilterNav />
   <div v-if="error">{{ error }}</div>
-  <div class="projectlist" v-for="project in projects">
-    <span>
-      <p>{{ project.title }}</p>
-      {{ project.description }}</span
-    >
+  <div class="projectlist">
+    <SingleProduct :projects="projects" />
+    <!-- <span> -->
+    <!-- <p>{{ project.title }}</p> -->
+    <!-- {{ project.description }} -->
+    <!-- </span> -->
     <br />
   </div>
 </template>
@@ -14,11 +15,13 @@
 import { ref } from "vue";
 // @ is an alias to /src
 import FilterNav from "../components/FilterNav";
+import SingleProduct from "../components/SingleProduct";
 
 export default {
   name: "Home",
   components: {
     FilterNav,
+    SingleProduct,
   },
   setup() {
     const projects = ref([]);

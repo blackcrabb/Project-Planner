@@ -1,14 +1,16 @@
 <template>
-  <div class="product"></div>
+  <div v-for="project in projects">
+    <span>
+      <p>{{ project.title }}</p>
+      {{ project.description }}
+    </span>
+    <br />
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      projects: [],
-    };
-  },
+  props: ["projects"],
 };
 </script>
 
