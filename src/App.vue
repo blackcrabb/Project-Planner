@@ -1,4 +1,5 @@
 <template>
+  <h1>Project Planner</h1>
   <Navbar />
   <router-view />
 </template>

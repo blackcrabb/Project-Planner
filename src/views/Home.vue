@@ -2,12 +2,14 @@
   <FilterNav />
   <div v-if="error">{{ error }}</div>
   <div class="projectlist">
-    <SingleProduct :projects="projects" />
-    <!-- <span> -->
-    <!-- <p>{{ project.title }}</p> -->
-    <!-- {{ project.description }} -->
-    <!-- </span> -->
-    <br />
+    <div v-for="project in projects" :key="project.id">
+      <SingleProduct :project="project" />
+      <!-- <span> -->
+      <!-- <p>{{ project.title }}</p> -->
+      <!-- {{ project.description }} -->
+      <!-- </span> -->
+      <br />
+    </div>
   </div>
 </template>
 
@@ -46,19 +48,6 @@ export default {
 };
 </script>
 <style>
-p {
-  font-size: 1.7rem;
-}
-span {
-  border: solid black 0.08rem;
-  /* padding-left: 25rem; */
-  border-radius: 10px;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: left; */
-  padding-bottom: 5px;
-}
 .projectlist {
   padding-left: 25rem;
 }
