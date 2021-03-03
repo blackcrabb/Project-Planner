@@ -26,7 +26,8 @@ export default {};
 .nav a {
   font-weight: bold;
   font-size: 1.75rem;
-  color: #2c3e50;
+  /* color: #2c3e50; */
+  color: #1d2935;
   text-decoration: none;
 }
 .nav a.router-link-exact-active {

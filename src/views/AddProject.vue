@@ -41,15 +41,14 @@ export default {
 
 <style>
 form {
-  background: white;
-  padding: 20px;
+  padding: 1rem;
   border-radius: 10px;
 }
 label {
   display: block;
-  color: #2c3e50;
+  color: #1d2935;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 20px 0 10px 0;

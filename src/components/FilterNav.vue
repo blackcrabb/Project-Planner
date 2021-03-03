@@ -1,14 +1,33 @@
 <template>
   <div class="filnav">
-    <button><h5>VIEW ALL</h5></button>
-    <button><h5>COMPLETED</h5></button>
-    <button><h5>ONGOING</h5></button>
+    <button @click="updateFilter('all')" :class="{ active: current === 'all' }">
+      <h5>VIEW ALL</h5>
+    </button>
+    <button
+      @click="updateFilter('completed')"
+      :class="{ active: current === 'completed' }"
+    >
+      <h5>COMPLETED</h5>
+    </button>
+    <button
+      @click="updateFilter('ongoing')"
+      :class="{ active: current === 'ongoing' }"
+    >
+      <h5>ONGOING</h5>
+    </button>
   </div>
   <br />
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["current"],
+  methods: {
+    updateFilter(by) {
+      this.$emit("filterChange", by);
+    },
+  },
+};
 </script>
 
 <style>
@@ -22,11 +41,12 @@ export default {};
 .filnav h5 {
   padding-right: 1.4rem;
   font-size: 1.25rem;
+  color: #1d2935;
 }
 .filnav button {
   padding: 0;
   background: none;
-  border-bottom: 0.3rem solid rgb(255, 255, 255);
+  border-bottom: 0.3rem solid #6467aa;
   border-top: none;
   border-left: none;
   border-right: none;

@@ -17,6 +17,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  /* color: #2c3e50; */
+  color: #1d2935;
+}
+h1 {
+  font-size: 3rem;
+  /* background: white; */
+  /* height: 8vh; */
+  /* opacity: 0.8; */
 }
 </style>
